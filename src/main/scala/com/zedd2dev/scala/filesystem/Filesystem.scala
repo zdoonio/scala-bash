@@ -20,4 +20,10 @@ object Filesystem extends App {
     state = Command.from(input).apply(state)
   }
 
+  //  io.Source.stdin.getLines().foldLeft(State(root, root))((currentState, newLine) => {
+  //    currentState.show
+  //    Command.from(newLine).apply(currentState)
+  //  })
+
+
 }
