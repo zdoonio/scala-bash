@@ -5,7 +5,7 @@ import java.nio.file.FileSystemException
 /**
   * Created by Dominik Zduńczyk on 15.04.19.
   */
-class File(override val parentPath: String, override val name: String, contents: String)
+class File(override val parentPath: String, override val name: String, val contents: String)
   extends DirEntry(parentPath, name) {
 
   override def asDirectory: Directory =
