@@ -8,7 +8,7 @@ import com.zedd2dev.scala.files.Directory
 class State(val root: Directory, val wd: Directory, val output: String) {
 
   def show: Unit =
-    print("\n" + State.SHELL_TOKEN)
+    print("\n" + State.SHELL_TOKEN + " ")
     print(output)
 
 

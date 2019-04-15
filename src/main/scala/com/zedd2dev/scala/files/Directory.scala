@@ -1,5 +1,7 @@
 package com.zedd2dev.scala.files
 
+import java.nio.file.FileSystemException
+
 /**
   * Created by Dominik Zduńczyk on 12.04.19.
   */
@@ -32,6 +34,8 @@ class Directory(override val parentPath: String, override val name: String, val 
     new Directory(parentPath, name, contents.filter(e => !e.name.equals(entryName)) :+ newEntry)
 
   def asDirectory: Directory = this
+
+  def asFile: File = throw new FileSystemException("A directory cannot be converted to a file")
 
   def getType: String = "Directory"
 }

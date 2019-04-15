@@ -9,5 +9,7 @@ abstract class DirEntry(val parentPath: String, val name: String) {
 
   def asDirectory: Directory
 
+  def asFile: File
+
   def getType: String
 }
