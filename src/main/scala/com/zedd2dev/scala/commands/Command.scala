@@ -17,6 +17,7 @@ object Command {
   val RM = "rm"
   val ECHO = "echo"
   val CAT = "cat"
+  val JAVPAD = "javpad"
 
   def emptyCommand: Command = new Command {
     override def apply(state: State): State = state
@@ -55,6 +56,9 @@ object Command {
       case ECHO =>
         if (tokens.length < 2) incompleteCommand(ECHO)
         else new Echo(tokens.tail)
+
+      case JAVPAD =>
+        new Javpad
 
       case LS =>
         new Ls
